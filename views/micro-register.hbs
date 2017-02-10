@@ -1,0 +1,39 @@
+<div class="micro-register">
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <div class="register">
+      <div class="form-group has-feedback name">
+        <label class="control-label general" for="inputSuccess2">用户名</label>
+        <input type="text" class="form-control register-name" id="inputSuccess2" placeholder="用户名">
+        <span class="none glyphicon glyphicon-ok form-control-feedback icon"></span>
+        <span class="none prompt">*用户名不能为空</span>
+        <span class='none prompt1'>*字母、数字、下划线组成，<br>字母开头，4-16位(禁输非法字符)</span>
+        <span class="none prompt2">*该用户名已经存在</span>
+      </div>
+      <div class="form-group has-feedback password">
+        <label class="control-label general" for="inputSuccess2">密码</label>
+        <input type="password" class="form-control register-password" placeholder="密码">
+        <span class="none glyphicon glyphicon-ok form-control-feedback icon1"></span>
+        <span class="none passwordPrompt">*密码不能为空</span>
+        <span class='none passwordPrompt1'>*字母开头，长度在6-18之间，<br>只能包含字符、数字和下划线</span>
+      </div>
+      <select class="form-control register-gender">
+        <option>男</option>
+        <option>女</option>
+      </select>
+      <div class="form-group has-feedback nickname">
+        <label class="control-label general" for="inputSuccess2">昵称</label>
+        <input type="text" class="form-control register-nickname" placeholder="昵称">
+        <span class="none glyphicon glyphicon-ok form-control-feedback icon2"></span>
+        <span class="none nicknamePrompt">*昵称不能为空</span>
+        <span class='none nicknamePrompt1'>*中文不超过5位(禁输非法字符)</span>
+        <span class="none nicknamePrompt2">*该昵称已经存在</span>
+      </div>
+      <div class="head-portrait picture">
+          <a href=""><span class="glyphicon glyphicon-picture"></span>头像</a>
+          <input type="file" name="image" class="pictures" value="" />
+      </div>
+      <button type="button" class="btn btn-info ensure">注册</button>
+      <button type="button" class="btn btn-danger shut">关闭</button>
+    </div>
+  </div>
+</div>

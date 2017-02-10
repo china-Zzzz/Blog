@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/javascripts/jquery-1.11.1.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="row title">
+      <div class="col-xs-12 col-sm-6 col-md-8">
+          <div class= "title-left">
+            <h1>微吧</h1>
+            <input type="text" class="text form-control" placeholder="搜索">
+            <a class= 'search' href= ''><span class="glyphicon glyphicon-search"></span></a>
+          </div>
+      </div>
+      <div class="col-xs-6 col-md-4">
+          <ul class= 'title-right'>
+            <li class= "home"><span class="glyphicon glyphicon-home"></span>首页</li>
+            <li class= "registration">注册</li>
+            <li class= "Login">登录</li>
+            <li class= "user"><span class="glyphicon glyphicon-user"></span>用户</li>
+            <li class= "retreat">退出</li>
+          </ul>
+      </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-8">
+            <div class="release">
+              <div class="release-title">
+                <h3>请输入发布内容</h3>
+                <span>还可以输入<i>140</i>个字</span>
+              </div>
+              <textarea class="form-control release-text" rows="3"></textarea>
+              <div class="release-button">
+                <button type="button" class="btn btn-danger release-red-button">发布</button>
+                <a href=""><span class="glyphicon glyphicon-picture"></span>图片</a>
+                <input type="file" name="image" class="picture" value="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <div class="user-information">
+              <div class="user-background"><img src='{{pictures}}' alt="头像" class="img-circle img-head"></div>
+              <ul>
+                <li>{{nickname}}</li>
+                <li>{{gender}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
+

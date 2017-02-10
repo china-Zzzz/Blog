@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/javascripts/skin/layer.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="row title">
+      <div class="col-xs-10 col-sm-6 col-md-6">
+          <div class= "title-left">
+            <h1>微吧</h1>
+            <input type="text" class="text form-control" placeholder="搜索">
+            <a class= 'search' href= ''><span class="glyphicon glyphicon-search"></span></a>
+          </div>
+      </div>
+      <div class="col-xs-8 col-md-6">
+          <ul class= 'title-right'>
+            <li class= "home"><span class="glyphicon glyphicon-home"></span>首页</li>
+            <li class= "registration">注册</li>
+            <li class= "Login">登录</li>
+            <li class= "user"><span class="glyphicon glyphicon-user"></span>用户</li>
+            <li class= "retreat">退出</li>
+          </ul>
+      </div>
+      <!--注册弹框-->
+      <div class="micro-register none">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+          <form action="js/test.json" method="post" class="bl-form bl-formhor" id="jsForm">
+          <div class="register">
+            <div class="form-group has-feedback name">
+              <label class="control-label general" for="inputSuccess2">用户名</label>
+              <input class="form-control register-name fn-tinput fl-name sender_name-1 EnNumber" type="text" name="1" data-rule-ennumber="true" data-msg-required="不能为空" required data-msg-ennumber="字母开头，长度在6-18之间" aria-required="true" placeholder="用户名">
+              <span id="prompt" class="none prompt2">该用户名已经存在</span>
+            </div>
+            <div class="form-group has-feedback password">
+              <label class="control-label general" for="inputSuccess2">密码</label>
+              <input class="form-control register-name fn-tinput fl-name sender_name-1 Password" type="password" name="2" data-rule-password="true" data-msg-required="不能为空" required data-msg-password="字母开头，长度在6-18之间" aria-required="true" placeholder="密码">
+            </div>
+            <select class="form-control register-gender sex">
+              <option>男</option>
+              <option>女</option>
+            </select>
+            <div class="form-group has-feedback nickname">
+              <label class="control-label general" for="inputSuccess2">昵称</label>
+              <input class="form-control register-name fn-tinput fl-name sender_name-1 Nickname" type="text" name="3" data-rule-nickname="true" data-msg-required="不能为空" required data-msg-nickname="中文不超过5位(禁输非法字符)" aria-required="true" placeholder="昵称">
+              <span id="nicknamePrompt" class="none nicknamePrompt2">*该昵称已经存在</span>
+            </div>
+            <!--<div class="head-portrait picture">
+                <a href=""><span class="glyphicon glyphicon-picture"></span>头像</a>
+                <input type="file" name="image" class="pictures" value="" />
+            </div>-->
+            <button type="submit" class="btn btn-info ensure fn-btn btn-primary btn-submit submitBtn">注册</button>
+            <button type="button" class="btn btn-danger shut">关闭</button>
+          </div>
+          </form>
+        </div>
+      </div>
+      <!--登陆弹框-->
+      <div class="micro-entry none">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+        <div class="entry">
+          <div class="form-group has-feedback entry-name">
+            <label class="control-label general" for="inputSuccess2">用户名</label>
+            <input type="text" class="form-control entry-text-name" id="inputSuccess2" placeholder="用户名">
+            <span class="none glyphicon glyphicon-ok form-control-feedback entry-icon"></span>
+            <span class="none prompt">*用户名不能为空</span>
+            <span class="none prompt1">*用户名不存在</span>
+          </div>
+          <div class="form-group has-feedback entry-name1">
+            <label class="control-label general" for="inputSuccess2">密码</label>
+            <input type="password" class="form-control entry-password" placeholder="密码">
+            <span class="none glyphicon glyphicon-ok form-control-feedback entry-icon1"></span>
+            <span class="none passwordPrompt">*密码不能为空</span>
+            <span class="none passwordPrompt1">*密码输入有误</span>
+          </div>
+          <button type="button" class="btn btn-info entry-ensure">登录</button>
+          <button type="button" class="btn btn-danger entry-shut">关闭</button>
+        </div>
+        </div>
+      </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-8">
+            <div class="release">
+              <div class="release-title">
+                <h3>请输入发布内容</h3>
+                <span>还可以输入<i>140</i>个字</span>
+              </div>
+              <textarea class="form-control release-text" rows="3"></textarea>
+              <div class="release-button">
+                <button type="button" class="btn btn-danger release-red-button">发布</button>
+                <a href=""><span class="glyphicon glyphicon-picture"></span>图片</a>
+                <input type="file" name="image" class="picture" value="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <div class="user-information">
+              <div class="user-background"><img src='{{pictures}}' alt="头像" class="img-circle img-head"></div>
+              <ul>
+                <li>{{nickname}}</li>
+                <li>{{gender}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 遮罩层 -->
+      <div class="occlusion none"></div>
+  </body>
+  <script src="/javascripts/jquery-1.11.1.min.js"></script>
+  <script src="/javascripts/jquery.validate.min.js"></script>
+  <script src="/javascripts/bootstrap.min.js"></script>
+  <script src="/javascripts/handlebars.js"></script>
+  <script src="/javascripts/layer/layer.js"></script>
+  <script src="/javascripts/micro.js"></script>
+</html>
